@@ -237,15 +237,12 @@ public class TypeScriptAngularClientCodegen extends AbstractTypeScriptClientCode
             additionalProperties.put(HTTP_CONTEXT_IN_OPTIONS, false);
         }
 
-<<<<<<< HEAD
         if (ngVersion.atLeast("12.1.0")) {
             additionalProperties.put(DELETE_ACCEPTS_BODY, true);
         } else {
             additionalProperties.put(DELETE_ACCEPTS_BODY, false);
         }
 
-=======
->>>>>>> e73bc68686c862883723a002dfa97683c4f16ed1
         additionalProperties.put(NG_VERSION, ngVersion);
 
         if (additionalProperties.containsKey(API_MODULE_PREFIX)) {

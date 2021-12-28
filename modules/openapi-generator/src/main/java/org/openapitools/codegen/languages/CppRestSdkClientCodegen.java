@@ -422,6 +422,8 @@ public class CppRestSdkClientCodegen extends AbstractCppCodegen {
         boolean isMap = parameter.isMap == Boolean.TRUE;
         boolean isString = parameter.isString == Boolean.TRUE;
 
+        if (parameter.dataType == null)
+        	System.out.println();
         if (!isPrimitiveType && !isArray && !isMap && !isString && !parameter.dataType.startsWith("std::shared_ptr")) {
             parameter.dataType = "std::shared_ptr<" + parameter.dataType + ">";
         }

@@ -437,6 +437,8 @@ public class PythonClientCodegen extends PythonLegacyClientCodegen {
     @Override
     public CodegenProperty fromProperty(String name, Schema p) {
         CodegenProperty cp = super.fromProperty(name, p);
+        if (cp == null)
+        	System.out.println();
         if (cp.isEnum) {
             updateCodegenPropertyEnum(cp);
         }

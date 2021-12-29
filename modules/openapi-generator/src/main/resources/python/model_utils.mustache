@@ -1261,6 +1261,8 @@ def validate_and_convert_types(input_value, required_types_mixed, path_to_item,
             )
             return converted_instance
         else:
+            if input_value is None:
+                return None
             raise get_type_error(input_value, path_to_item, valid_classes,
                                  key_type=False)
 
